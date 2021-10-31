@@ -1,0 +1,14 @@
+version: '2'
+services:
+  app:
+    image: vyacheslav25/kubegram:v2
+    restart: always 
+    environment:
+      - BOT_TOKEN=0000000:AAAAAAAAAAAAA
+      - CHAT_ID=00000000
+      - FILE_STORAGE=/storage/
+      - K3PATH=/root/.kube/.clusters/k3
+      - KUBECONFIG=/root/.kube/config
+    volumes:
+      - ./dev-cluster:/root/.kube/.clusters/dev-cluster
+      - ./storage:/storage
