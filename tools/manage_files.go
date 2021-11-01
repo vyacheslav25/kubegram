@@ -9,7 +9,6 @@ import (
 )
 
 func GetFiles(command string, args ...string) string {
-
 	cmd := exec.Command(command, args...)
 	res, err := cmd.CombinedOutput()
 	if err != nil {
@@ -21,7 +20,6 @@ func GetFiles(command string, args ...string) string {
 }
 
 func CatFiles(command, arg string) string {
-
 	cmd := exec.Command(command, arg)
 	res, err := cmd.CombinedOutput()
 	if err != nil {

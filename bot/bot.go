@@ -24,8 +24,7 @@ type File struct {
 	FileID string `json:"file_id"`
 }
 
-func KubeTelegramBot(Token string) (*BotAPI, error) {
-
+func KubeTelegramBot(Token string) (*BotAPI, error) {	
 	token := BotAPI{Token: Token}
 
 	var chat_id_string string = os.Getenv("CHAT_ID")

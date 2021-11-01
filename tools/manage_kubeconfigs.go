@@ -9,7 +9,6 @@ import (
 )
 
 func RewriteK3() string {
-
 	srcFile, err := os.Open(os.Getenv("K3PATH"))
 	checkError(err)
 	defer srcFile.Close()
@@ -24,7 +23,7 @@ func RewriteK3() string {
 	err = destFile.Sync()
 	checkError(err)
 
-	fmt.Println("--------------------Done--------------------")
+	
 	kubeconfig := os.Getenv("KUBECONFIG")
 	result := grepKubeConfig(kubeconfig)
 

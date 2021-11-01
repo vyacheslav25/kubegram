@@ -6,7 +6,6 @@ import (
 )
 
 func GetCommand(kubeclient string, args ...string) string {
-
 	cmd := exec.Command(kubeclient, args...)
 	res, err := cmd.CombinedOutput()
 	if err != nil {
